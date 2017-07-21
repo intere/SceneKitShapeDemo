@@ -1,26 +1,91 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bJm-es-M7T">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Game View Controller-->
+        <!--Main App View Controller-->
+        <scene sceneID="GiG-V4-Fze">
+            <objects>
+                <viewController id="bJm-es-M7T" customClass="MainAppViewController" customModule="SceneKitDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AHS-aW-3fn"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fdk-58-Tvf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bbj-vP-Cuj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wP5-y6-bEZ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="41"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MB1-g7-tiS">
+                                        <rect key="frame" x="64.5" y="3" width="302.5" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shape" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SXD-OX-3lt">
+                                        <rect key="frame" x="8" y="8" width="48.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="MB1-g7-tiS" firstAttribute="leading" secondItem="SXD-OX-3lt" secondAttribute="trailing" constant="8" id="4fV-MW-GP2"/>
+                                    <constraint firstItem="SXD-OX-3lt" firstAttribute="leading" secondItem="wP5-y6-bEZ" secondAttribute="leading" constant="8" id="MPN-DB-See"/>
+                                    <constraint firstAttribute="trailing" secondItem="MB1-g7-tiS" secondAttribute="trailing" constant="8" id="cRS-Rm-bSr"/>
+                                    <constraint firstItem="MB1-g7-tiS" firstAttribute="top" secondItem="wP5-y6-bEZ" secondAttribute="top" constant="3" id="e0q-Ga-K7R"/>
+                                    <constraint firstItem="SXD-OX-3lt" firstAttribute="centerY" secondItem="MB1-g7-tiS" secondAttribute="centerY" id="gTF-2D-Ek7"/>
+                                    <constraint firstAttribute="bottom" secondItem="MB1-g7-tiS" secondAttribute="bottom" constant="8" id="zhB-ho-qlz"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="81K-uM-AeC">
+                                <rect key="frame" x="0.0" y="61" width="375" height="606"/>
+                                <connections>
+                                    <segue destination="BV1-FR-VrT" kind="embed" id="iF3-R1-U8h"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.32156862749999998" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wP5-y6-bEZ" secondAttribute="trailing" id="3Uo-vM-zve"/>
+                            <constraint firstItem="Fdk-58-Tvf" firstAttribute="top" secondItem="81K-uM-AeC" secondAttribute="bottom" id="89b-W1-PJO"/>
+                            <constraint firstItem="81K-uM-AeC" firstAttribute="leading" secondItem="Bbj-vP-Cuj" secondAttribute="leading" id="Bsy-c9-ryW"/>
+                            <constraint firstItem="wP5-y6-bEZ" firstAttribute="leading" secondItem="Bbj-vP-Cuj" secondAttribute="leading" id="JBI-vf-gw7"/>
+                            <constraint firstItem="81K-uM-AeC" firstAttribute="top" secondItem="wP5-y6-bEZ" secondAttribute="bottom" id="JWR-lQ-mfO"/>
+                            <constraint firstItem="wP5-y6-bEZ" firstAttribute="top" secondItem="AHS-aW-3fn" secondAttribute="bottom" id="rz5-SX-1hq"/>
+                            <constraint firstAttribute="trailing" secondItem="81K-uM-AeC" secondAttribute="trailing" id="zoJ-RN-gtO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="shapeTextField" destination="MB1-g7-tiS" id="ix9-mZ-715"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IsJ-0e-EcZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-447.19999999999999" y="-54.422788605697157"/>
+        </scene>
+        <!--Shape View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Cei-gA-s71"/>
-                        <viewControllerLayoutGuide type="bottom" id="O1X-57-Ctf"/>
-                    </layoutGuides>
+                <viewController id="BV1-FR-VrT" customClass="ShapeViewController" customModule="SceneKitDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <sceneKitView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="606"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </sceneKitView>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="465" y="-55"/>
         </scene>
     </scenes>
 </document>
