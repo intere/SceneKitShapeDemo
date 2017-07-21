@@ -40,6 +40,13 @@ class ShapeViewController: UIViewController {
         
         // configure the view
         scnView.backgroundColor = UIColor.black
+
+        for child in scene.rootNode.childNodes {
+            guard child.geometry is SCNBox else {
+                continue
+            }
+            child.removeFromParentNode()
+        }
         
         // add a tap gesture recognizer
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
