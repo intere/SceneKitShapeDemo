@@ -182,6 +182,7 @@
 				TargetAttributes = {
 					36131F631F22697E00EAE77E = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 268S5GJFWZ;
 						ProvisioningStyle = Automatic;
 					};
 					36131F791F22697E00EAE77E = {
@@ -381,6 +382,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 268S5GJFWZ;
 				INFOPLIST_FILE = SceneKitDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.intere.SceneKitDemo;
@@ -393,6 +395,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 268S5GJFWZ;
 				INFOPLIST_FILE = SceneKitDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.intere.SceneKitDemo;
